@@ -15,22 +15,6 @@
 :root { scroll-padding-top: 88px; } /* adjust if your header height changes */
 .section { scroll-margin-top: 88px; } /* ensures headings are visible after clicking nav */
 
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-
-  /* make it invisible */
-  background: transparent;
-  border: none;
-  backdrop-filter: none;
-
-  /* spacing stays clean */
-  padding: 22px 0;
-}
-
-
-
 html, body {
   background:
     radial-gradient(1200px 600px at 15% -10%, rgba(59,130,246,0.25), transparent 55%),
@@ -61,13 +45,26 @@ a:hover { text-decoration: none; }
 }
 .skip:focus { left: 12px; z-index: 99; }
 
-.topbar {
+.topbar{
+  /* keep your layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 18px;
   padding: 22px 0;
+
+  /* make it sticky */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  /* make it invisible (no bar) */
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
 }
+
 
 .brand {
   display: flex;
