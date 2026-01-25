@@ -12,8 +12,8 @@
 }
 
 /* Fix anchor jump under sticky header */
-:root { scroll-padding-top: 74px; } /* adjust if your header height changes */
-.section { scroll-margin-top: 74px; } /* ensures headings are visible after clicking nav */
+:root { scroll-padding-top: 80px; } /* adjust if your header height changes */
+.section { scroll-margin-top: 80px; } /* ensures headings are visible after clicking nav */
 
 html, body {
   background:
