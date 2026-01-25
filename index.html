@@ -3,146 +3,271 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adarsh Rouniyar — Portfolio</title>
-  <meta name="description" content="AI/ML engineer building LLM, RAG, and blockchain systems." />
+  <title>Adarsh Rouniyar — CTO & Applied AI Engineer</title>
+  <meta name="description" content="CTO & Applied AI Engineer. Production LLM/RAG systems, verified smart contracts, and trading automation. Based in Taiwan." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Adarsh Rouniyar — Portfolio" />
-  <meta property="og:description" content="LLM + RAG pipelines, APIs, Docker/K8s deployments, and smart contracts." />
+  <meta property="og:title" content="Adarsh Rouniyar — CTO & Applied AI Engineer" />
+  <meta property="og:description" content="Production LLM/RAG systems + verified smart contracts. Based in Kaohsiung, Taiwan." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://darkblood784.github.io/Adarsh-Rouniyar/" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Adarsh Rouniyar — Portfolio" />
-  <meta name="twitter:description" content="LLM + RAG pipelines, APIs, Docker/K8s deployments, and smart contracts." />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <a class="skip" href="#about">Skip to content</a>
 
-  <header class="wrap">
-    <h1>Adarsh Rouniyar</h1>
-    <p class="tag">AI/ML • NLP • RAG • Smart Contracts</p>
+<body>
+  <a class="skip" href="#projects">Skip to content</a>
+
+  <header class="wrap topbar">
+    <div class="brand">
+      <div class="dot" aria-hidden="true"></div>
+      <span>Adarsh Rouniyar</span>
+    </div>
 
     <nav aria-label="Primary">
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#now">Now</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
-      <a class="pill" href="resume.pdf" target="_blank" rel="noreferrer">Résumé (PDF)</a>
+      <a class="nav-cta" href="resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
     </nav>
   </header>
 
   <main class="wrap">
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I build end-to-end AI systems: LLM + RAG pipelines, APIs, and production deployments with Docker/K8s.
-        I also ship blockchain tooling and trading bots.
-      </p>
-      <p class="muted">
-        Currently focused on: reliable retrieval, evals, and pragmatic shipping (not demos that break in production).
-      </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="kicker">Kaohsiung, Taiwan • CTO & Applied AI Engineer</p>
+
+        <h1>
+          I build production AI systems<br />
+          <span class="grad">LLM/RAG • Real-time data • Deployment • Smart contracts</span>
+        </h1>
+
+        <p class="lead">
+          I ship real products: LLM assistants with retrieval + live market data, blockchain-integrated platforms,
+          and automation systems designed to run reliably in production.
+        </p>
+
+        <div class="chips" aria-label="Key proof">
+          <span class="chip">LLM Crypto AI Assistant (production-grade architecture)</span>
+          <span class="chip">Verified contracts on X Layer, BASE, BSC</span>
+          <span class="chip">823K+ USDT/USDC staked on wstaking.net</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="resume.pdf" target="_blank" rel="noreferrer">Download Résumé</a>
+          <a class="btn" href="https://github.com/darkblood784" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/adarsh-rouniyar-876b1419b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+
+        <div class="meta">
+          <span>✉️ <a href="mailto:adarsh@csie.io">adarsh@csie.io</a></span>
+          <span>📞 +886 937 772 769</span>
+        </div>
+
+        <div class="highlights">
+          <div class="hitem">
+            <div class="hnum">823K+</div>
+            <div class="hlabel">USDT/USDC staked</div>
+          </div>
+          <div class="hitem">
+            <div class="hnum">3</div>
+            <div class="hlabel">Chains deployed</div>
+          </div>
+          <div class="hitem">
+            <div class="hnum">LLM</div>
+            <div class="hlabel">RAG + live data</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>Snapshot</h2>
+        <ul class="proof">
+          <li><strong>Role:</strong> CTO & Applied AI Engineer (Whale Strategy)</li>
+          <li><strong>Strength:</strong> building systems that actually run in production</li>
+          <li><strong>AI:</strong> LLM pipelines, RAG, evaluation-minded engineering</li>
+          <li><strong>Blockchain:</strong> EVM contracts + staking platform</li>
+          <li><strong>Research:</strong> federated learning + trustworthy AI</li>
+        </ul>
+
+        <div class="mini-actions">
+          <a class="mini" href="https://whalestrategy.net" target="_blank" rel="noreferrer">Company site</a>
+          <a class="mini" href="https://whalestrategy.net/our-team/" target="_blank" rel="noreferrer">Team page</a>
+        </div>
+      </aside>
     </section>
 
-    <section id="projects">
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
       <h2>Projects</h2>
 
-      <ul class="cards">
-        <li>
-          <div class="card-head">
-            <h3>WStaking — Smart-contract staking</h3>
+      <div class="grid cards">
+        <article class="card">
+          <div class="card-top">
+            <h3>WStaking — Smart-contract staking platform</h3>
             <span class="badge">On-chain</span>
           </div>
-          <p>Verified contracts on X Layer & BSC powering a live staking platform.</p>
+          <p class="muted">
+            Verified staking contracts deployed on X Layer, BASE, and BSC powering a live platform with real user capital locked.
+          </p>
+          <ul class="bullets">
+            <li>Designed staking/unstaking logic and production deployment workflow.</li>
+            <li>Integrated on-chain contracts with real platform operations.</li>
+          </ul>
           <p class="stack"><span>Stack:</span> Solidity • EVM • Web3 • Infra</p>
-          <div class="card-actions">
-            <a href="https://wstaking.net" target="_blank" rel="noreferrer">Live site</a>
+          <div class="actions">
+            <a class="link" href="https://wstaking.net" target="_blank" rel="noreferrer">Live site</a>
+            <a class="link" href="https://whalestrategy.github.io/WStaking/" target="_blank" rel="noreferrer">GitHub page</a>
+            <a class="link" href="https://github.com/WhaleStrategy/Strategies" target="_blank" rel="noreferrer">Strategies repo</a>
           </div>
-        </li>
+        </article>
 
-        <li>
-          <div class="card-head">
+        <article class="card">
+          <div class="card-top">
             <h3>Crypto AI Assistant</h3>
             <span class="badge">LLM + RAG</span>
           </div>
-          <p>LLM chatbot with retrieval (RAG), packaged as a REST API with FastAPI + Docker.</p>
-          <p class="stack"><span>Stack:</span> FastAPI • Vector DB • Docker • LLM inference</p>
-          <div class="card-actions">
-            <!-- Replace # with your repo/demo link when ready -->
-            <a href="#" class="disabled" aria-disabled="true" title="Add a repo or demo link">Repo (soon)</a>
+          <p class="muted">
+            LLM assistant combining retrieval-augmented generation and real-time crypto market data for grounded insights and interaction.
+          </p>
+          <ul class="bullets">
+            <li>Designed for contextual answers (grounded retrieval), not hallucinated “vibes”.</li>
+            <li>Built to be deployable as an API service with monitoring in mind.</li>
+          </ul>
+          <p class="stack"><span>Stack:</span> Python • NLP • RAG • REST APIs • Docker/K8s</p>
+          <div class="actions">
+            <a class="link" href="#now">Live demo: coming soon</a>
           </div>
-        </li>
+        </article>
 
-        <li>
-          <div class="card-head">
-            <h3>Azure RAG Demo</h3>
-            <span class="badge">Azure</span>
+        <article class="card">
+          <div class="card-top">
+            <h3>Eff-AQI (ACM GoodIT) — Federated Learning</h3>
+            <span class="badge">Research</span>
           </div>
-          <p>Azure Cognitive Search + Azure OpenAI; single <code>POST /ask</code> endpoint.</p>
-          <p class="stack"><span>Stack:</span> ACS • Azure OpenAI • APIs</p>
-          <div class="card-actions">
-            <!-- Replace # with your repo/demo link when ready -->
-            <a href="#" class="disabled" aria-disabled="true" title="Add a repo or demo link">Repo (soon)</a>
+          <p class="muted">
+            CNN-based AQI estimation system + dataset shared publicly (Kaggle DOI + GitHub).
+          </p>
+          <ul class="bullets">
+            <li>Built dataset and reproducible pipeline for image-based AQI classification.</li>
+            <li>Published + shared artifacts for practical reuse.</li>
+          </ul>
+          <p class="stack"><span>Stack:</span> TensorFlow/PyTorch • CNNs • Federated Learning</p>
+          <div class="actions">
+            <a class="link" href="https://doi.org/10.34740/KAGGLE/DS/3152196" target="_blank" rel="noreferrer">Kaggle DOI</a>
+            <a class="link" href="https://github.com/darkblood784/Air-Pollution-Image-Dataset-From-India-and-Nepal" target="_blank" rel="noreferrer">GitHub</a>
           </div>
-        </li>
-      </ul>
+        </article>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+    <!-- NOW BUILDING (styled like your wsai.tw screenshot) -->
+    <section id="now" class="section">
+      <h2>Now Building</h2>
 
-      <div class="skills">
-        <div class="skill">
-          <h3>LLM Systems</h3>
-          <p>RAG, chunking/re-ranking, evaluation, prompt tooling, guardrails.</p>
+      <div class="coming-soon">
+        <div class="pill">Whale Strategy</div>
+        <h3>Crypto Chat is coming soon</h3>
+        <p>Stay tuned. I’m building something useful — a production Crypto AI assistant.</p>
+
+        <div class="soon-actions">
+          <a class="btn primary" href="https://wsai.tw/" target="_blank" rel="noreferrer">View wsai.tw</a>
+          <a class="btn" href="https://whalestrategy.net" target="_blank" rel="noreferrer">Whale Strategy</a>
+          <a class="btn ghost" href="mailto:adarsh@csie.io?subject=Crypto%20AI%20Assistant%20demo%20request">Request demo access</a>
         </div>
-        <div class="skill">
-          <h3>Backend & Deploy</h3>
-          <p>FastAPI/Flask, Docker, CI/CD basics, Linux, production reliability.</p>
-        </div>
-        <div class="skill">
-          <h3>Blockchain</h3>
-          <p>Solidity smart contracts, staking logic, security-minded engineering.</p>
+
+        <div class="soon-foot">
+          <span class="muted">For updates:</span> <a href="https://whalestrategy.net" target="_blank" rel="noreferrer">whalestrategy.net</a>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul class="links">
-        <li><a href="mailto:adarsh@csie.io">adarsh@csie.io</a></li>
-        <li><a href="https://www.linkedin.com/in/adarsh-rouniyar-876b1419b/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-        <li><a href="https://github.com/darkblood784" target="_blank" rel="noreferrer">GitHub</a></li>
-      </ul>
-      <p class="tiny muted">
-        Tip: add your timezone / location here if you want more inbound messages.
-      </p>
-    </section>
-  </main>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
 
-  <footer class="wrap small">
-    <p>© <span id="y"></span> Adarsh Rouniyar</p>
-  </footer>
+      <div class="timeline">
+        <div class="titem">
+          <div class="tmeta">
+            <h3>Chief Technology Officer & Applied AI Engineer — Whale Strategy (Taiwan)</h3>
+            <span class="date">Apr 2024 — Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Architected and deployed production-grade LLM crypto assistant (NLP pipelines + RAG + real-time market data).</li>
+            <li>Deployed verified smart contracts on X Layer, BASE, and BSC powering wstaking.net with 823K+ staked.</li>
+            <li>Built algorithmic trading bots using Python, OKX API, and TradingView (Pine Script).</li>
+            <li>Developed whalestrategy.net including hosting, security hardening, and SEO.</li>
+          </ul>
+        </div>
+
+        <div class="titem">
+          <div class="tmeta">
+            <h3>AI Research Assistant & Project Assistant — National Chung Cheng University</h3>
+            <span class="date">Nov 2021 — May 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Research in federated learning, trustworthy AI, and sustainable smart-city systems.</li>
+            <li>Published at IEEE ISC2, ACM GoodIT, and Future Internet.</li>
+            <li>Contributed to NSTC–CCU Trustworthy AI Smart City Project with academic/government partners.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+
+      <div class="pubs">
+        <div class="pub">
+          <h3>Peer-reviewed</h3>
+          <ul class="bullets">
+            <li><strong>Artificial Intelligence Review (2024):</strong> Federated Learning Design and Functional Models: Survey</li>
+            <li><strong>Future Internet (2023):</strong> Federated Adversarial Training Strategies for Privacy & Security…</li>
+            <li><strong>ACM GoodIT (2023):</strong> Eff-AQI: Efficient CNN-Based Model for Air Pollution Estimation</li>
+            <li><strong>IEEE ISC2 (2022):</strong> Federated Trustworthy AI Architecture for Smart Cities</li>
+          </ul>
+        </div>
+
+        <div class="pub">
+          <h3>Dataset</h3>
+          <ul class="bullets">
+            <li>Air Pollution Image Dataset from India and Nepal (Kaggle DOI + GitHub)</li>
+          </ul>
+        </div>
+
+        <div class="pub">
+          <h3>Under review</h3>
+          <ul class="bullets">
+            <li>FLEX-DETECT: Federated Learning for Enhanced Vehicle Detection… (Elsevier IPM)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="tiny muted">Full citation details are in the résumé PDF.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="contact-btn" href="mailto:adarsh@csie.io">adarsh@csie.io</a>
+        <a class="contact-btn" href="https://www.linkedin.com/in/adarsh-rouniyar-876b1419b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="contact-btn" href="https://github.com/darkblood784" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <p class="tiny muted">Languages: English, Hindi, Nepali; Mandarin (basic).</p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Adarsh Rouniyar</span>
+    </footer>
+  </main>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // If resume.pdf isn't present, don't send people to a dead link.
-    // (Keeps the UI honest.)
-    fetch("resume.pdf", { method: "HEAD" }).then(r => {
-      if (!r.ok) {
-        const a = document.querySelector('a[href="resume.pdf"]');
-        if (a) {
-          a.textContent = "Résumé (add file)";
-          a.classList.add("disabled");
-          a.removeAttribute("target");
-          a.setAttribute("href", "#contact");
-          a.setAttribute("title", "Upload resume.pdf to the repo root to enable this link.");
-        }
-      }
-    }).catch(() => {});
   </script>
 </body>
 </html>
