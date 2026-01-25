@@ -19,10 +19,16 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(7,11,20,0.55);
-  border-bottom: 1px solid rgba(148,163,184,0.10);
+
+  /* make it invisible */
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+
+  /* spacing stays clean */
+  padding: 22px 0;
 }
+
 
 
 html, body {
