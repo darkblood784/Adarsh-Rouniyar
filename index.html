@@ -5,42 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Adarsh Rouniyar — Portfolio</title>
   <meta name="description" content="AI/ML engineer building LLM, RAG, and blockchain systems." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adarsh Rouniyar — Portfolio" />
+  <meta property="og:description" content="LLM + RAG pipelines, APIs, Docker/K8s deployments, and smart contracts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://darkblood784.github.io/Adarsh-Rouniyar/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Adarsh Rouniyar — Portfolio" />
+  <meta name="twitter:description" content="LLM + RAG pipelines, APIs, Docker/K8s deployments, and smart contracts." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip" href="#about">Skip to content</a>
+
   <header class="wrap">
     <h1>Adarsh Rouniyar</h1>
     <p class="tag">AI/ML • NLP • RAG • Smart Contracts</p>
-    <nav>
+
+    <nav aria-label="Primary">
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <a href="resume.pdf">Résumé (PDF)</a>
+      <a class="pill" href="resume.pdf" target="_blank" rel="noreferrer">Résumé (PDF)</a>
     </nav>
   </header>
 
   <main class="wrap">
     <section id="about">
       <h2>About</h2>
-      <p>I build end‑to‑end AI systems: LLM + RAG pipelines, APIs, and production deployments with Docker/K8s. I also ship blockchain tooling and trading bots.</p>
+      <p>
+        I build end-to-end AI systems: LLM + RAG pipelines, APIs, and production deployments with Docker/K8s.
+        I also ship blockchain tooling and trading bots.
+      </p>
+      <p class="muted">
+        Currently focused on: reliable retrieval, evals, and pragmatic shipping (not demos that break in production).
+      </p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
+
       <ul class="cards">
         <li>
-          <h3>WStaking — Smart‑contract staking</h3>
+          <div class="card-head">
+            <h3>WStaking — Smart-contract staking</h3>
+            <span class="badge">On-chain</span>
+          </div>
           <p>Verified contracts on X Layer & BSC powering a live staking platform.</p>
-          <p><a href="https://wstaking.net" target="_blank" rel="noreferrer">wstaking.net</a></p>
+          <p class="stack"><span>Stack:</span> Solidity • EVM • Web3 • Infra</p>
+          <div class="card-actions">
+            <a href="https://wstaking.net" target="_blank" rel="noreferrer">Live site</a>
+          </div>
         </li>
+
         <li>
-          <h3>Crypto AI Assistant</h3>
-          <p>LLM chatbot with retrieval (RAG), packaged as REST API with FastAPI + Docker.</p>
+          <div class="card-head">
+            <h3>Crypto AI Assistant</h3>
+            <span class="badge">LLM + RAG</span>
+          </div>
+          <p>LLM chatbot with retrieval (RAG), packaged as a REST API with FastAPI + Docker.</p>
+          <p class="stack"><span>Stack:</span> FastAPI • Vector DB • Docker • LLM inference</p>
+          <div class="card-actions">
+            <!-- Replace # with your repo/demo link when ready -->
+            <a href="#" class="disabled" aria-disabled="true" title="Add a repo or demo link">Repo (soon)</a>
+          </div>
         </li>
+
         <li>
-          <h3>Azure RAG Demo</h3>
+          <div class="card-head">
+            <h3>Azure RAG Demo</h3>
+            <span class="badge">Azure</span>
+          </div>
           <p>Azure Cognitive Search + Azure OpenAI; single <code>POST /ask</code> endpoint.</p>
+          <p class="stack"><span>Stack:</span> ACS • Azure OpenAI • APIs</p>
+          <div class="card-actions">
+            <!-- Replace # with your repo/demo link when ready -->
+            <a href="#" class="disabled" aria-disabled="true" title="Add a repo or demo link">Repo (soon)</a>
+          </div>
         </li>
       </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <div class="skill">
+          <h3>LLM Systems</h3>
+          <p>RAG, chunking/re-ranking, evaluation, prompt tooling, guardrails.</p>
+        </div>
+        <div class="skill">
+          <h3>Backend & Deploy</h3>
+          <p>FastAPI/Flask, Docker, CI/CD basics, Linux, production reliability.</p>
+        </div>
+        <div class="skill">
+          <h3>Blockchain</h3>
+          <p>Solidity smart contracts, staking logic, security-minded engineering.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
@@ -50,6 +116,9 @@
         <li><a href="https://www.linkedin.com/in/adarsh-rouniyar-876b1419b/" target="_blank" rel="noreferrer">LinkedIn</a></li>
         <li><a href="https://github.com/darkblood784" target="_blank" rel="noreferrer">GitHub</a></li>
       </ul>
+      <p class="tiny muted">
+        Tip: add your timezone / location here if you want more inbound messages.
+      </p>
     </section>
   </main>
 
@@ -59,6 +128,21 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // If resume.pdf isn't present, don't send people to a dead link.
+    // (Keeps the UI honest.)
+    fetch("resume.pdf", { method: "HEAD" }).then(r => {
+      if (!r.ok) {
+        const a = document.querySelector('a[href="resume.pdf"]');
+        if (a) {
+          a.textContent = "Résumé (add file)";
+          a.classList.add("disabled");
+          a.removeAttribute("target");
+          a.setAttribute("href", "#contact");
+          a.setAttribute("title", "Upload resume.pdf to the repo root to enable this link.");
+        }
+      }
+    }).catch(() => {});
   </script>
 </body>
 </html>
