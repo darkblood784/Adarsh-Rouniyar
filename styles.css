@@ -49,8 +49,8 @@ a:hover { text-decoration: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 18px;
-  padding: 16px 0;
+  gap: 25px;
+  padding: 20px 0;
 
   position: sticky;
   isolation: isolate;
