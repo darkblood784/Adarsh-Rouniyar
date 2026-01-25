@@ -98,7 +98,7 @@ nav a{
   background: transparent;
   font-weight: 700;
   opacity: 0.92;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease, background 0.15s ease;
 }
 
 nav a:hover{
