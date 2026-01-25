@@ -12,8 +12,8 @@
 }
 
 /* Fix anchor jump under sticky header */
-:root { scroll-padding-top: 80px; } /* adjust if your header height changes */
-.section { scroll-margin-top: 80px; } /* ensures headings are visible after clicking nav */
+:root { scroll-padding-top: 74px; } /* adjust if your header height changes */
+.section { scroll-margin-top: 74px; } /* ensures headings are visible after clicking nav */
 
 html, body {
   background:
@@ -46,26 +46,34 @@ a:hover { text-decoration: none; }
 .skip:focus { left: 12px; z-index: 99; }
 
 .topbar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  padding: 20px 0;
-
   position: sticky;
-  isolation: isolate;
   top: 0;
   z-index: 100;
 
-  /* glass effect */
+  /* full-width header layer */
+  width: 100%;
+
+  /* keep inner layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 22px; /* IMPORTANT: add side padding here */
+}
+
+/* full-width glass background */
+.topbar::before{
+  content:"";
+  position: absolute;
+  inset: 0;
   background: rgba(7, 11, 20, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
-  /* subtle separation without “box” feeling */
   border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  z-index: -1;
 }
 
+/* subtle glow line across full width */
 .topbar::after{
   content:"";
   position: absolute;
@@ -84,7 +92,12 @@ a:hover { text-decoration: none; }
   pointer-events: none;
 }
 
-
+.topbar-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
 
 
 .brand {
