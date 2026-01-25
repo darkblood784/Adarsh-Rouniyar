@@ -266,8 +266,28 @@
     </footer>
   </main>
 
+  <button id="toTop" class="to-top" aria-label="Back to top" title="Back to top">
+    ↑
+  </button>
+
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+  
+    // Back-to-top button behavior
+    const toTop = document.getElementById("toTop");
+  
+    const toggleToTop = () => {
+      if (window.scrollY > 400) toTop.classList.add("show");
+      else toTop.classList.remove("show");
+    };
+  
+    window.addEventListener("scroll", toggleToTop, { passive: true });
+    toggleToTop();
+  
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
+
 </body>
 </html>
